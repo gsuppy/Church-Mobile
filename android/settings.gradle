@@ -1,0 +1,3 @@
+rootProject.name = 'ChurchMobile'
+
+include ':app'
