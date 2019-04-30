@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, Button, Image} from 'react-native';
+import Styles from '../Styles.js';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -8,10 +9,45 @@ class HomeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <Button
-        title="Go to Jane's profile"
-        onPress={() => navigate('Profile', {name: 'Jane'})}
-      />
+      <View style={Styles.body}>
+        <View style={Styles.navigator}>
+          <Button
+            title='Go to Your Profile'
+            onPress={() => navigate('Profile', {name: 'Jane'})}
+          />        
+        </View>
+        <View style={Styles.homeContainer}>
+
+          <View style={Styles.imageContainer}>
+          <Image
+            source={require('../assets/chbc_logo.png')}
+            style={Styles.churchLogo}
+          />
+          </View>
+
+          <View style={Styles.gridContainer}> 
+            <View style={Styles.aboutContainer}>
+              <Text> About Us </Text>
+            </View>
+
+            <View style={Styles.sermonsContainer}>
+              <Text> Sermons & Resources </Text>
+            </View>
+
+            <View style={Styles.connectContainer}>
+              <Text> Connect </Text>
+            </View>
+
+            <View style={Styles.ministriesContainer}>
+              <Text> Ministries </Text>
+            </View>
+          </View>
+
+        </View>
+
+
+
+      </View>
     );
   }
 }

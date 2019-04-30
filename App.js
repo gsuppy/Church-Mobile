@@ -12,14 +12,3 @@ const MainNavigator = createStackNavigator({
 
 const App = createAppContainer(MainNavigator);
 export default App;
-
-// type Props = {};
-// export default class App extends Component<Props> {
-//   render() {
-//     return (
-//       <View style={Styles.container}>
-//         <Text style={Styles.welcome}>Church Mobile</Text>
-//       </View>
-//     );
-//   }
-// }
