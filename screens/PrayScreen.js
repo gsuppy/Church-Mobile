@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import {Text, View, Button} from 'react-native';
 
-class DirectoryScreen extends React.Component {
+class PrayScreen extends React.Component {
   static navigationOptions = {
-    title: "Directory",
+    title: "Pray",
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
       <View>
-        <Text> Directory </Text>
+        <Text> Pray </Text>
       </View>
     );
   }
 }
 
-export default DirectoryScreen;
+export default PrayScreen;

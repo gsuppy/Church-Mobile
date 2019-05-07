@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {Text, View, Button} from 'react-native';
+import {Image, View, Button, Text} from 'react-native';
+// import { Container, Header, Content, List, ListItem, Text, Icon, Left, Body, Right, Switch } from 'native-base';
+import Styles from '../styles/ProfileStyles.js';
 
 class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -8,10 +10,19 @@ class ProfileScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <Button
-        title="Go to Home"
-        onPress={() => navigate('Home', {name: 'Jane'})}
-      />
+      <View style={Styles.container}>
+        <View style={Styles.topContainer}>
+          <Text style={Styles.topText}> Profile </Text>
+          <Image
+            source={require('../assets/profile.jpg')}
+            style={Styles.topImage}
+          />  
+        </View>
+
+        <View style={Styles.bottomContainer}>
+          <Switch />
+        </View>
+      </View>
     );
   }
 }
